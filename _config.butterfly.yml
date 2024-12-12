@@ -122,7 +122,7 @@ highlight_height_limit : 200 # 200px代码高度限制，超出折叠
 social:
   fab fa-github: https://github.com/ExctOcean || Github
   fas fa-envelope: ExctOcean:1078432154@qq.com || Email
-  fas fa-bilibili: https://space.bilibili.com/295912842?spm_id_from=333.1007.0.0 || Bilibili
+  fab fa-bilibili: https://space.bilibili.com/295912842?spm_id_from=333.1007.0.0 || Bilibili
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
 # per_page: Posts displayed per page. (0 = disable pagination)
@@ -133,19 +133,19 @@ index_generator:
   order_by: -date
 
 # 7. 顶部图
-# index_img:xxx.png
+index_img: https://i0.hdslb.com/bfs/article/bd17c4dc8a148381a7a70295e0c6a05ec9cdf5de.jpg@1192w.avif
 
 # 8. 文章置顶与封面
 # cover:
-  # 是否显示文章封面
-  index_enable: true
-  aside_enable: true
-  archives_enable: true
-  # 封面显示的位置
-  # 三个值可配置 left , right , both
-  position: both
-  # 当没有设置cover时，默认的封面显示
-  default_cover: 
+#   # 是否显示文章封面
+#   index_enable: true
+#   aside_enable: true
+#   archives_enable: true
+#   # 封面显示的位置
+#   # 三个值可配置 left , right , both
+#   position: both
+#   # 当没有设置cover时，默认的封面显示
+#   default_cover: 
 
 # 9. 文章页相关设置
 ## 9.1 显示文章meta信息
@@ -221,7 +221,7 @@ post_pagination: false
 
 # 10. 头像
 avatar:
-  img: ./img/img_head.jpg
+  img: https://github.com/ExctOcean/ExctOcean.github.io/blob/main/img/img_head.jpg?raw=true
   effect: false # true则会一直转圈
 
 # 12. Footer设置
