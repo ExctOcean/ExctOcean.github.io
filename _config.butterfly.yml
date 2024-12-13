@@ -134,7 +134,7 @@ index_generator:
 
 # 7. 顶部图
 # index_img: https://i0.hdslb.com/bfs/article/bd17c4dc8a148381a7a70295e0c6a05ec9cdf5de.jpg@1192w.avif
-index_img:
+index_img: /img/home_bg.webp
 # 8. 文章置顶与封面
 # cover:
 #   # 是否显示文章封面
@@ -236,7 +236,7 @@ footer:
 ## 13.2 夜间模式
 # dark mode
 darkmode:
-  enable: false
+  enable: true
   # dark 和 light 两种模式切换按钮
   button: true
   # Switch dark/light mode automatically (自動切換 dark mode和 light mode)
@@ -331,7 +331,7 @@ newest_comments:
 # 颜色（HEX值/RGB值/颜色单词/渐变色)
 # 留空 不显示背景
 # background: url(https://source.fomal.cc/img/dm1.webp)
-background: url(https://source.fomal.cc/img/home_bg.webp)
+background: /img/home_bg.webp
 
 
 # 16. 打字效果
@@ -345,7 +345,7 @@ activate_power_mode:
 
 # 17. 图片背景
 # footer是否显示图片背景(与top_img一致)
-footer_bg: false
+footer_bg: true
 
 # 18. 背景特效
 canvas_nest:
@@ -441,14 +441,12 @@ pjax:
 # 插入代码到头部 </head> 之前 和 底部 </body> 之前
 inject:
   head:
-    - <link rel="stylesheet" href="/css/custom.css" media="defer" onload="this.media='all'">
+    <link rel="stylesheet" href="/css/custom.css">
   bottom:
     - <script defer src="/js/cursor.js"></script>
 
 # 27.本地搜索系统
 local_search:
-# -  enable: false
-# +  enable: true
   enable: true
 
 # Live2D
@@ -491,8 +489,16 @@ envelope_comment:
     - 有什么想吐槽的？
     - 哪怕是有什么想吃的，都可以告诉我哦~
   bottom: 自动书记人偶竭诚为您服务！ #仅支持单行文本
-  # height: # 1050px #，信封划出的高度
-  # path: #【可选】comments 的路径名称。默认为 comments，生成的页面为 comments/index.html
+  height: # 1050px #，信封划出的高度
+  path: #【可选】comments 的路径名称。默认为 comments，生成的页面为 comments/index.html
   front_matter: #【可选】comments页面的 front_matter 配置
     title: 留言板
     comments: true
+
+# 文章标题风车
+beautify:
+  enable: true
+  field: post # site/post
+  # title-prefix-icon: '\f0c1' 原内容
+  title-prefix-icon: '\f863'
+  title-prefix-icon-color: "#F47466"
