@@ -134,7 +134,7 @@ index_generator:
 
 # 7. 顶部图
 # index_img: https://i0.hdslb.com/bfs/article/bd17c4dc8a148381a7a70295e0c6a05ec9cdf5de.jpg@1192w.avif
-index_img: /img/home_bg.webp
+index_img:
 # 8. 文章置顶与封面
 # cover:
 #   # 是否显示文章封面
