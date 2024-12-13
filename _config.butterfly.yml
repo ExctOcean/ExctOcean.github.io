@@ -133,8 +133,8 @@ index_generator:
   order_by: -date
 
 # 7. 顶部图
-index_img: https://i0.hdslb.com/bfs/article/bd17c4dc8a148381a7a70295e0c6a05ec9cdf5de.jpg@1192w.avif
-
+# index_img: https://i0.hdslb.com/bfs/article/bd17c4dc8a148381a7a70295e0c6a05ec9cdf5de.jpg@1192w.avif
+index_img:
 # 8. 文章置顶与封面
 # cover:
 #   # 是否显示文章封面
@@ -330,7 +330,9 @@ newest_comments:
 # 图片格式 url(http://xxxxxx.com/xxx.jpg)
 # 颜色（HEX值/RGB值/颜色单词/渐变色)
 # 留空 不显示背景
-background: url(https://source.fomal.cc/img/dm1.webp)
+# background: url(https://source.fomal.cc/img/dm1.webp)
+background: url(https://source.fomal.cc/img/home_bg.webp)
+
 
 # 16. 打字效果
 # Typewriter Effect (打字效果)
@@ -343,7 +345,7 @@ activate_power_mode:
 
 # 17. 图片背景
 # footer是否显示图片背景(与top_img一致)
-footer_bg: true
+footer_bg: false
 
 # 18. 背景特效
 canvas_nest:
@@ -439,7 +441,7 @@ pjax:
 # 插入代码到头部 </head> 之前 和 底部 </body> 之前
 inject:
   head:
-    - <link rel="stylesheet" href="/xxx.css">
+    - <link rel="stylesheet" href="/css/custom.css" media="defer" onload="this.media='all'">
   bottom:
     - <script src="xxxx"></script>
 
@@ -447,3 +449,50 @@ inject:
 local_search:
 -  enable: false
 +  enable: true
+
+
+# Live2D
+## https://github.com/EYHN/hexo-helper-live2d
+live2d:
+  enable: true #开关插件版看板娘
+  scriptFrom: local # 默认
+  pluginRootPath: live2dw/ # 插件在站点上的根目录(相对路径)
+  pluginJsPath: lib/ # 脚本文件相对与插件根目录路径
+  pluginModelPath: assets/ # 模型文件相对与插件根目录路径
+  # scriptFrom: jsdelivr # jsdelivr CDN
+  # scriptFrom: unpkg # unpkg CDN
+  # scriptFrom: https://npm.elemecdn.com/live2d-widget@3.x/lib/L2Dwidget.min.js # 你的自定义 url
+  tagMode: false # 标签模式, 是否仅替换 live2d tag标签而非插入到所有页面中
+  debug: false # 调试, 是否在控制台输出日志
+  model:
+    use: live2d-widget-model-wanko # npm-module package name
+    # use: wanko # 博客根目录/live2d_models/ 下的目录名
+    # use: ./wives/wanko # 相对于博客根目录的路径
+    # use: https://npm.elemecdn.com/live2d-widget-model-wanko@1.0.5/assets/wanko.model.json # 你的自定义 url
+  display:
+    position: right #控制看板娘位置
+    width: 150 #控制看板娘大小
+    height: 300 #控制看板娘大小
+  mobile:
+    show: true # 手机中是否展示
+
+# envelope_comment
+# see https://akilar.top/posts/e2d3c450/
+envelope_comment:
+  enable: true #控制开关
+  custom_pic:      
+    cover: https://npm.elemecdn.com/hexo-butterfly-envelope/lib/violet.jpg #信笺头部图片
+    line: https://npm.elemecdn.com/hexo-butterfly-envelope/lib/line.png #信笺底部图片
+    beforeimg: https://npm.elemecdn.com/hexo-butterfly-envelope/lib/before.png # 信封前半部分
+    afterimg: https://npm.elemecdn.com/hexo-butterfly-envelope/lib/after.png # 信封后半部分
+  message: #信笺正文，多行文本，写法如下
+    - 有什么想问的？
+    - 有什么想说的？
+    - 有什么想吐槽的？
+    - 哪怕是有什么想吃的，都可以告诉我哦~
+  bottom: 自动书记人偶竭诚为您服务！ #仅支持单行文本
+  height: #1050px，信封划出的高度
+  path: #【可选】comments 的路径名称。默认为 comments，生成的页面为 comments/index.html
+  front_matter: #【可选】comments页面的 front_matter 配置
+    title: 留言板
+    comments: true
