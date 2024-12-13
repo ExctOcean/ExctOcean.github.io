@@ -222,7 +222,7 @@ post_pagination: false
 # 10. 头像
 avatar:
   img: https://github.com/ExctOcean/ExctOcean.github.io/blob/main/img/img_head.jpg?raw=true
-  effect: false # true则会一直转圈
+  effect: true # true则会一直转圈
 
 # 12. Footer设置
 footer:
@@ -331,7 +331,7 @@ newest_comments:
 # 颜色（HEX值/RGB值/颜色单词/渐变色)
 # 留空 不显示背景
 # background: url(https://source.fomal.cc/img/dm1.webp)
-background: /img/home_bg.webp
+background: url(https://github.com/ExctOcean/ExctOcean.github.io/blob/main/img/home_bg.webp)
 
 
 # 16. 打字效果
@@ -345,7 +345,7 @@ activate_power_mode:
 
 # 17. 图片背景
 # footer是否显示图片背景(与top_img一致)
-footer_bg: true
+footer_bg: false
 
 # 18. 背景特效
 canvas_nest:
@@ -495,10 +495,3 @@ envelope_comment:
     title: 留言板
     comments: true
 
-# 文章标题风车
-beautify:
-  enable: true
-  field: post # site/post
-  # title-prefix-icon: '\f0c1' 原内容
-  title-prefix-icon: '\f863'
-  title-prefix-icon-color: "#F47466"
